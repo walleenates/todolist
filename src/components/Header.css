@@ -41,4 +41,18 @@
   button:hover {
     background-color: #2980b9;
   }
+
+  .logout-but button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #236f86; /* Red color, you can change it */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .logout-but button:hover {
+    background-color: #006e72; /* Lighter red on hover, you can change it */
+  }
   

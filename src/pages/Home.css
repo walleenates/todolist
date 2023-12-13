@@ -6,7 +6,7 @@
   
   .todo-container {
     margin-top: 20px;
-    display: grid;
+    display: gd;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
   }

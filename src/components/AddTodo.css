@@ -1,0 +1,15 @@
+.priority-container {
+    margin-top: 10px;
+    padding: 10px;
+  }
+  
+  .priority-container label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .priority-container select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }

@@ -3,7 +3,12 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-export default function Todo({ todo, toggleComplete, handleDelete, handleEdit }) {
+export default function Todo({
+  todo,
+  toggleComplete,
+  handleDelete,
+  handleEdit,
+}) {
   const [newTitle, setNewTitle] = React.useState(todo.title);
 
   const handleChange = (e) => {
@@ -27,6 +32,10 @@ export default function Todo({ todo, toggleComplete, handleDelete, handleEdit })
           onChange={handleChange}
         />
         <p>Date and Time: {todo.selectedDateTime || "Not specified"}</p>
+        <p>Priority: {todo.priority || "Not specified"}</p>
+        {/* Add the following lines for time tracking */}
+        <p>Start Time: {todo.startTime || "Not specified"}</p>
+        <p>End Time: {todo.endTime || "Not specified"}</p>
       </div>
       <div>
         <button

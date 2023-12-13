@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
+import "./AddTodo.css";
 
 const AddTodo = () => {
   const [title, setTitle] = useState("");
   const [selectedDateTime, setSelectedDateTime] = useState("");
+  const [priority, setPriority] = useState("lessPriority");
+  const [startTime, setStartTime] = useState(""); // Add this line
+  const [endTime, setEndTime] = useState(""); // Add this line
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -13,9 +17,15 @@ const AddTodo = () => {
         title,
         completed: false,
         selectedDateTime,
+        priority,
+        startTime, // Add this line
+        endTime, // Add this line
       });
       setTitle("");
       setSelectedDateTime("");
+      setPriority("lessPriority");
+      setStartTime(""); // Add this line
+      setEndTime(""); // Add this line
       notifySuccess("Task added successfully!");
     }
   };
@@ -25,8 +35,8 @@ const AddTodo = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="input_container">
+    <form onSubmit={handleSubmit} className="add-todo-form">
+      <div className="input-container">
         <input
           type="text"
           placeholder="Enter todo..."
@@ -41,7 +51,34 @@ const AddTodo = () => {
           onChange={(e) => setSelectedDateTime(e.target.value)}
         />
       </div>
-      <div className="btn_container">
+      <div className="time-tracking-container">
+        <label htmlFor="startTime">Start Time:</label>
+        <input
+          type="time"
+          id="startTime"
+          value={startTime}
+          onChange={(e) => setStartTime(e.target.value)}
+        />
+        <label htmlFor="endTime">End Time:</label>
+        <input
+          type="time"
+          id="endTime"
+          value={endTime}
+          onChange={(e) => setEndTime(e.target.value)}
+        />
+      </div>
+      <div className="priority-container">
+        <label htmlFor="priority">Priority:</label>
+        <select
+          id="priority"
+          value={priority}
+          onChange={(e) => setPriority(e.target.value)}
+        >
+          <option value="lessPriority">Less Priority</option>
+          <option value="important">Important</option>
+        </select>
+      </div>
+      <div className="btn-container">
         <button>Add</button>
       </div>
     </form>

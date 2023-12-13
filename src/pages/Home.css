@@ -10,4 +10,26 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
   }
+
+  /* Home.css */
+
+body {
+  background-color: lightgray; /* Default background color */
+  color: black; /* Default text color */
+}
+
+.dark-mode {
+  background-color: darkslategray; /* Dark mode background color */
+  color: white; /* Dark mode text color */
+}
+/* Home.css */
+.todo {
+  color: #000; /* Set the default text color (black) */
+}
+
+.dark-mode .todo {
+  color: #000000; /* Set the text color for dark mode (white) */
+}
+
+
   

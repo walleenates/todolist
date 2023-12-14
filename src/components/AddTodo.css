@@ -13,3 +13,16 @@
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+  .time-tracking-container{
+    color: rgb(0, 0, 0);
+  }
+  .dark-mode .time-tracking-container{
+    color: rgb(0, 0, 0);
+  }
+
+  .priority {
+    color: black;
+  }
+  .dark-mode .priority-container{
+    color: rgb(0, 0, 0);
+  }

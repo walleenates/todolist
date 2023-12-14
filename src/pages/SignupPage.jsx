@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../firebase';
 import './SignupPage.css';
 
@@ -7,14 +8,13 @@ const SignupPage = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
-
+  const navigate = useNavigate()
   const Signup = () => {
     try {
       if (passwordRef.current.value.length > 8) {
         if (passwordRef.current.value === passwordConfirmRef.current.value) {
-          return console.log(
-            createUserWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
-          );
+          navigate('/')
+          return createUserWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
         } else {
           console.log(passwordRef.current.value)
           console.log(passwordConfirmRef.current.value)

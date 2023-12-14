@@ -68,7 +68,7 @@ const AddTodo = () => {
         />
       </div>
       <div className="priority-container">
-        <label htmlFor="priority">Priority:</label>
+        <label htmlFor="c">Priority:</label>
         <select
           id="priority"
           value={priority}

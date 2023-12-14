@@ -3,17 +3,19 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useRef } from 'react';
 import auth from '../firebase';
 import './LoginPage.css';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
-
+  const navigate = useNavigate()
   const Signin = () => {
     try {
       return signInWithEmailAndPassword(
         auth,
         emailRef.current.value,
-        passwordRef.current.value
+        passwordRef.current.value,
+        navigate('/')
       ).catch((error) => console.log(error));
     } catch (error) {
       console.log(error);
@@ -31,7 +33,7 @@ const LoginPage = () => {
           <h2>Login</h2>
           <input ref={emailRef} name='email' placeholder='Email' />
           <input ref={passwordRef} name='password' type='password' placeholder='Password' />
-          <button onClick={Signin}>Login</button>
+          <button className='lbttn' onClick={Signin}>Login</button>
         </div>
       </div>
     </>

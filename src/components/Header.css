@@ -51,8 +51,22 @@
     border-radius: 5px;
     cursor: pointer;
   }
+  .dark-mode .logout-but button{
+    background-color: rgb(49, 49, 49);
+  }
   
   .logout-but button:hover {
     background-color: #006e72; /* Lighter red on hover, you can change it */
+  }
+  .dark-mode .header-container {
+    background-color: #006e72;
+  }
+  
+  .dark-mode .todo {
+    color: #000000; /* Set the text color for dark mode (white) */
+  }
+  .dark-mode {
+    background-color: rgb(49, 49, 49); /* Dark mode background color */
+  color: white;
   }
   

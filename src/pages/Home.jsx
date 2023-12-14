@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Title from '../components/Title';
 import AddTodo from '../components/AddTodo';
 import Todo from '../components/Todo';
+import { Navigate, useNavigate } from 'react-router-dom';
 import {
   collection,
   query,
@@ -11,13 +12,14 @@ import {
   deleteDoc,
 } from 'firebase/firestore';
 import { db } from '../firebase';
+import {auth} from '../firebase'
 import Header from '../components/Header';
 import './Home.css';
 
 const Home = () => {
   const [todos, setTodos] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
-
+  const navigate = useNavigate()
   React.useEffect(() => {
     const q = query(collection(db, 'todos'));
     const unsub = onSnapshot(q, (querySnapshot) => {
@@ -28,6 +30,7 @@ const Home = () => {
       setTodos(todosArray);
     });
     return () => unsub();
+    
   }, []);
 
   const handleEdit = async (todo, title) => {
@@ -46,15 +49,18 @@ const Home = () => {
     setDarkMode(!darkMode);
     
   };
-
+ 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : 'light-mode'}`}>
-      <Header />
       <div>
-        <Title />
-        <button onClick={toggleDarkMode}>
+        <div className="headers">
+        <Header />
+        <button className='dbttn' onClick={toggleDarkMode}>
           {darkMode ? 'Light Mode' : 'Dark Mode'}
         </button>
+        </div>
+        <Title />
+        
       </div>
       <div>
         <AddTodo />

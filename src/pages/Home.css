@@ -16,20 +16,40 @@
 body {
   background-color: lightgray; /* Default background color */
   color: black; /* Default text color */
+  margin: 0;
 }
 
 .dark-mode {
-  background-color: darkslategray; /* Dark mode background color */
+  background-color: rgb(49, 49, 49); /* Dark mode background color */
   color: white; /* Dark mode text color */
 }
 /* Home.css */
 .todo {
   color: #000; /* Set the default text color (black) */
 }
-
-.dark-mode .todo {
-  color: #000000; /* Set the text color for dark mode (white) */
+.dark-mode .header-container {
+  background-color: #006e72;
 }
 
+.dark-mode .title h1 {
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+}
+.dark-mode .dbttn {
+  color: #fff;
+}
+.dbttn {
+  background-color: transparent;
+  color: black;
+
+  text-align: center;
+}
+.dbttn:hover {
+  background-color: transparent;
+}
+.headers{
+  text-align: center;
+}
 
   

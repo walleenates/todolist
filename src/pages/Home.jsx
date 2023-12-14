@@ -2,7 +2,7 @@ import React, {  useState } from 'react';
 import Title from '../components/Title';
 import AddTodo from '../components/AddTodo';
 import Todo from '../components/Todo';
-
+import { BiSun, BiMoon } from 'react-icons/bi';
 import {
   collection,
   query,
@@ -54,8 +54,8 @@ const Home = () => {
         <div className="headers">
         <Header />
         <button className='dbttn' onClick={toggleDarkMode}>
-          {darkMode ? 'Light Mode' : 'Dark Mode'}
-        </button>
+  {darkMode ? <BiMoon /> : <BiSun />}
+</button>
         </div>
         <Title />
         

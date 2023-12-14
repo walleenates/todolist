@@ -11,6 +11,7 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  
 }
 
 .nav-bar a {
@@ -23,8 +24,9 @@
 }
 
 .nav-bar a:hover {
-  color: #3498db;
+  color: #3498db; /* Change to your preferred hover color */
 }
+
   
 .userAction {
   display: flex;
@@ -73,7 +75,7 @@ button:hover {
   background-color: rgb(49, 49, 49);
   color: white;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 667px) {
   .nav-bar {
     flex-direction: column; /* Stack navigation items vertically on small screens */
   }
@@ -85,4 +87,24 @@ button:hover {
     margin: 10px 0; /* Add spacing between elements on small screens */
     width: 100%; /* Make buttons and links full-width on small screens */
   }
+}
+.user-info-container {
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.welcome-message {
+  background: linear-gradient(to right, #5effa7, #87cefa); /* Adjusted bright linear gradient */
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.user-email {
+  background: linear-gradient(to right, #5effa7, #87cefa); /* Adjusted bright linear gradient */
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 18px;
 }

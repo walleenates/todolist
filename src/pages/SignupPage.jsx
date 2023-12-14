@@ -3,6 +3,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../firebase';
 import './SignupPage.css';
+import Header from '../components/Header';
 
 const SignupPage = () => {
   const emailRef = useRef();
@@ -30,15 +31,18 @@ const SignupPage = () => {
   };
 
   return (
+    <>
+    <Header />
     <div className='signup-container'>
       <div className='signup-form'>
-        
+        <h2>Sign up</h2>
         <input ref={emailRef} type='email' name='email' placeholder='Email' />
         <input ref={passwordRef} type='password' name='password' placeholder='Password' />
         <input ref={passwordConfirmRef} type='password' name='password-confirm' placeholder='Password Confirm' />
         <button onClick={Signup}>Sign up</button>
       </div>
     </div>
+    </>
   );
 };
 

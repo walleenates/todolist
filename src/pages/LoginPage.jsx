@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import auth from '../firebase';
 import './LoginPage.css';
 import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
 
 const LoginPage = () => {
   const emailRef = useRef();
@@ -28,6 +29,7 @@ const LoginPage = () => {
 
   return (
     <>
+    <Header />
       <div className='login-container'>
         <div className='login-form'>
           <h2>Login</h2>

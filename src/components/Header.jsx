@@ -42,7 +42,7 @@ const Header = () => {
             </div>
           )}
 
-          
+          {currentUser && <p>{currentUser.email}</p>}
 
           <div className='logout-but'>
             {auth.currentUser ? <button onClick={SignOut}>Log Out</button> : null}

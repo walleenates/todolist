@@ -53,9 +53,10 @@ const Home = () => {
       <div>
         <div className="headers">
         <Header />
-        <button className={`dbttn ${darkMode ? 'rotate' : ''}`} onClick={toggleDarkMode}>
-  {darkMode ? <BiSun size={20} /> : <BiMoon size={20} />}
+        <button className='dbttn' onClick={toggleDarkMode}>
+  {darkMode ? <BiSun /> : <BiMoon />}
 </button>
+
 
         </div>
         <Title />

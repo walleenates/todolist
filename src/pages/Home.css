@@ -61,21 +61,18 @@ body {
 
 
 .dbttn {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease; /* Added transition for color and transform */
-  border-radius: 500%; /* Make it a circle */
+  
+border-radius: 20px;
+width: auto;
+}
+
+.dark-mode .dbttn {
+  color: #fff; /* Set the initial color for dark mode */
 }
 
 
-.dark-mode .dbttn:hover {
-  color: #4fa3d1; /* Change to your preferred hover color for dark mode */
-}
 
-.dark-mode .dbttn.rotate {
-  transform: rotate(180deg); /* Rotate the icon for a visual effect in dark mode */
-}
+
 .headers {
   text-align: center;
   color: #3498db;

@@ -29,7 +29,7 @@ const LoginPage = () => {
 
   return (
     <>
-    <Header />
+    <Header/>
       <div className='login-container'>
         <div className='login-form'>
           <h2>Login</h2>

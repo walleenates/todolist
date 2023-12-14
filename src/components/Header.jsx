@@ -37,7 +37,7 @@ const Header = () => {
             <Link to='/'>Home</Link>
           ) : (
             <div className='userAction'>
-              <Link to='/login'>Login</Link>
+              <Link to='/Login'>Login</Link>
               <Link to='/signup'>SignUp</Link>
             </div>
           )}

@@ -54,7 +54,7 @@ const Home = () => {
         <div className="headers">
         <Header />
         <button className='dbttn' onClick={toggleDarkMode}>
-  {darkMode ? <BiMoon /> : <BiSun />}
+  {darkMode ? <BiSun /> : <BiMoon />}
 </button>
         </div>
         <Title />

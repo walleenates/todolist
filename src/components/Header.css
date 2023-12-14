@@ -73,3 +73,16 @@ button:hover {
   background-color: rgb(49, 49, 49);
   color: white;
 }
+@media screen and (max-width: 767px) {
+  .nav-bar {
+    flex-direction: column; /* Stack navigation items vertically on small screens */
+  }
+
+  .nav-bar a,
+  .userAction a,
+  button,
+  .logout-but button {
+    margin: 10px 0; /* Add spacing between elements on small screens */
+    width: 100%; /* Make buttons and links full-width on small screens */
+  }
+}

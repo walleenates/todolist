@@ -1,72 +1,75 @@
 /* Header.css */
 .header-container {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-  }
-  
-  .nav-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .nav-bar a {
-    text-decoration: none;
-    color: white;
-    margin-right: 15px;
-    font-weight: bold;
-  }
-  
-  .userAction {
-    display: flex;
-    align-items: center;
-  }
-  
-  .userAction a {
-    margin-right: 15px;
-  }
-  
-  button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #2980b9;
-  }
-
-  .logout-but button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #236f86; /* Red color, you can change it */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .dark-mode .logout-but button{
-    background-color: rgb(49, 49, 49);
-  }
-  
-  .logout-but button:hover {
-    background-color: #006e72; /* Lighter red on hover, you can change it */
-  }
-  .dark-mode .header-container {
-    background-color: #006e72;
-  }
-  
-  .dark-mode .todo {
-    color: #000000; /* Set the text color for dark mode (white) */
-  }
-  .dark-mode {
-    background-color: rgb(49, 49, 49); /* Dark mode background color */
+  background-color: #333;
   color: white;
-  }
+  padding: 15px 0; /* Increased top and bottom padding for better spacing */
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px; /* Increased margin for better spacing */
+  font-weight: bold;
+  font-size: 16px; /* Slightly increased font size */
+  transition: color 0.3s ease;
+}
+
+.nav-bar a:hover {
+  color: #3498db;
+}
   
+.userAction {
+  display: flex;
+  align-items: center;
+}
+
+.userAction a {
+  margin-right: 20px; /* Increased margin for better spacing */
+  color: #3498db;
+  font-size: 16px; /* Slightly increased font size */
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px; /* Adjusted padding for a more balanced button */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.logout-but button {
+  padding: 12px 25px; /* Adjusted padding for a more balanced button */
+  font-size: 16px; /* Slightly increased font size */
+}
+
+.logout-but button:hover {
+  background-color: #006e72;
+}
+
+.dark-mode .header-container {
+  background-color: #343b3b;
+}
+
+.dark-mode .nav-bar a,
+.dark-mode .todo {
+  color: #fff;
+}
+
+.dark-mode {
+  background-color: rgb(49, 49, 49);
+  color: white;
+}

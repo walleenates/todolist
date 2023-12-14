@@ -35,7 +35,7 @@ const SignupPage = () => {
     <Header />
     <div className='signup-container'>
       <div className='signup-form'>
-        <h2>Sign</h2>
+        <h2>Sign up</h2>
         <input ref={emailRef} type='email' name='email' placeholder='Email' />
         <input ref={passwordRef} type='password' name='password' placeholder='Password' />
         <input ref={passwordConfirmRef} type='password' name='password-confirm' placeholder='Password Confirm' />

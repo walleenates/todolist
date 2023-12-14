@@ -52,3 +52,9 @@ body {
 .signup-form button:hover {
   background-color: #4fa3d1; /* Slightly darker blue on hover */
 }
+@media screen and (max-width: 767px) {
+  .signup-form {
+    width: 90%; /* Adjusted width for better responsiveness on small screens */
+    max-width: none; /* Remove max-width on small screens */
+  }
+}

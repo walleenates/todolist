@@ -37,3 +37,13 @@
 .dark-mode .priority {
   color: #ccc; /* Light text color in dark mode */
 }
+@media screen and (max-width: 767px) {
+  .priority-container label {
+    display: block;
+    margin-bottom: 5px; /* Add space between label and select on small screens */
+  }
+  
+  .priority-container select {
+    width: 100%; /* Make the select full-width on small screens */
+  }
+}

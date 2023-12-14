@@ -120,15 +120,17 @@ form input {
 .button-delete:hover {
   color: #ff6161; /* A shade of red */
 }
-@media screen and (max-width: 667px) {
-  .todo_container {
-    width: 90%;
+@media screen and (max-width: 767px) {
+  .signup-form {
+    width: 90%; /* Adjusted width for better responsiveness on small screens */
+    max-width: none; /* Remove max-width on small screens */
   }
+}
 
   .task {
     margin-right: 0px;
   }
-}
+
 input:focus,
 button:focus {
   outline: none;
